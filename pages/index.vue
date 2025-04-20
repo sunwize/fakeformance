@@ -1,17 +1,34 @@
 <script lang="ts" setup>
 import html2canvas from "html2canvas-pro";
+import confetti from "canvas-confetti";
 
 const metrics = useTemplateRef<HTMLDivElement>("metrics");
 
 const isLoading = ref(false);
+const showWaterMark = ref(false);
 
-const downloadImage = async () => {
+const fireConfetti = (origin: { x: number; y: number }) => {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin,
+  });
+};
+
+const downloadImage = async (event: MouseEvent) => {
   if (!metrics.value) return;
+
+  showWaterMark.value = true;
+  await nextTick();
 
   isLoading.value = true;
   const canvas = await html2canvas(metrics.value, {
     backgroundColor: null,
     scale: 2,
+  });
+  fireConfetti({
+    x: event.pageX / window.innerWidth,
+    y: event.pageY / window.innerHeight,
   });
   const link = document.createElement("a");
   link.href = canvas.toDataURL("image/png");
@@ -19,6 +36,7 @@ const downloadImage = async () => {
   link.click();
   link.remove();
   isLoading.value = false;
+  showWaterMark.value = false;
 };
 </script>
 
@@ -48,12 +66,16 @@ const downloadImage = async () => {
       <div class="shadow-medium rounded-2xl">
         <article
           ref="metrics"
-          class="bg-white rounded-2xl ring-1 ring-gray-200 px-16 pt-12 pb-4"
+          class="relative bg-white rounded-2xl ring-1 ring-gray-200 px-16 py-12"
         >
           <Metrics />
 
-          <div class="mt-8">
-            <p class="text-gray-400 text-[0.5rem]">Made with fakeformance</p>
+          <div v-if="showWaterMark">
+            <p
+              class="absolute left-1/2 top-3 -translate-x-1/2 text-gray-400 text-[0.5rem]"
+            >
+              Made with fakeformance
+            </p>
           </div>
         </article>
       </div>
