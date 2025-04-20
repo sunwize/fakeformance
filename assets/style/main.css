@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 @import "tailwindcss";
 @import "@nuxt/ui";
@@ -54,7 +53,7 @@
 }
 
 body {
-  @apply min-h-dvh flex flex-col overflow-x-hidden text-gray-900;
+  @apply min-h-dvh flex flex-col overflow-x-hidden bg-stone-50 text-gray-900;
 }
 
 #__nuxt {
@@ -81,10 +80,6 @@ body {
 
 .font-mono {
   font-family: "Fira Code", monospace;
-}
-
-.font-theme {
-  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .font-inter {
