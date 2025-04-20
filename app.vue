@@ -2,6 +2,7 @@
 useSeoMeta({
   title: "Fakeformance",
   description: "Create fake performance reports",
+  ogImage: "/banner.png",
 });
 
 useHead({
