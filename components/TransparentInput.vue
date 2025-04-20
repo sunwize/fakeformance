@@ -47,7 +47,7 @@ onMounted(async () => {
     <p
       ref="input"
       contenteditable
-      class="outline-none resize-none"
+      class="outline-none resize-none min-w-[2ch]"
       @input="onInput"
       @paste="onPaste"
     />

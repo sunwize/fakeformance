@@ -44,19 +44,19 @@ const downloadImage = async (event: MouseEvent) => {
   <div class="flex-1 text-center px-3 py-16 md:py-44">
     <div class="flex justify-center mb-16">
       <h2
-        class="relative text-6xl font-inter font-black leading-tight tracking-tight"
+        class="relative text-5xl md:text-6xl font-inter font-black leading-16 md:leading-tight tracking-tight"
       >
         Give yourself a
-        <span class="relative ml-1">
+        <span class="relative inline-block ml-1">
           <span
-            class="absolute -left-2 bottom-0 h-[4.5rem] rounded-2xl -inset-x-2 -rotate-3 bg-green-200"
+            class="absolute -left-2 -bottom-1.5 md:bottom-0 h-[4.5rem] rounded-2xl -inset-x-2 -rotate-3 bg-green-200"
           />
           <span class="relative">boost!</span>
         </span>
       </h2>
     </div>
 
-    <p class="font-medium text-gray-500 mb-4">Just click and edit.</p>
+    <p class="font-semibold text-gray-500 mb-4">Just click and edit.</p>
 
     <div class="flex flex-col items-center justify-center">
       <div class="shadow-medium rounded-2xl">
