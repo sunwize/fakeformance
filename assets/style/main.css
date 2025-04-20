@@ -49,6 +49,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+::selection {
+  background-color: var(--color-blue-200);
+}
+
 body {
   @apply min-h-dvh flex flex-col overflow-x-hidden text-gray-900;
 }

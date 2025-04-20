@@ -61,7 +61,7 @@ const downloadImage = async () => {
         <button
           color="neutral"
           size="xl"
-          class="bg-gray-900 disabled:bg-gray-700 text-white rounded-xl cursor-pointer not-disabled:active:scale-95 transition-all disabled:cursor-not-allowed px-6 py-3"
+          class="bg-gray-900 disabled:bg-gray-700 text-white rounded-xl cursor-pointer not-disabled:active:scale-95 transition-all disabled:cursor-not-allowed select-none px-6 py-3"
           :disabled="isLoading"
           @click="downloadImage"
         >
