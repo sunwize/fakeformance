@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --color-green-50: #f2fbf3;
+  --color-green-100: #e0f8e4;
+  --color-green-200: #c3efcb;
+  --color-green-300: #94e1a3;
+  --color-green-400: #5bca71;
+  --color-green-500: #37b050;
+  --color-green-600: #28913d;
+  --color-green-700: #237234;
+  --color-green-800: #205b2c;
+  --color-green-900: #1c4b27;
+  --color-green-950: #0a2912;
+
+  --color-orange-50: #fef8ec;
+  --color-orange-100: #fce9c9;
+  --color-orange-200: #f9cf8e;
+  --color-orange-300: #f5ad49;
+  --color-orange-400: #f3972c;
+  --color-orange-500: #ec7414;
+  --color-orange-600: #d1520e;
+  --color-orange-700: #ae370f;
+  --color-orange-800: #8d2b13;
+  --color-orange-900: #742413;
+  --color-orange-950: #431005;
+
+  --color-red-50: #fff1f1;
+  --color-red-100: #ffe1e0;
+  --color-red-200: #ffc7c5;
+  --color-red-300: #ffa09d;
+  --color-red-400: #ff6a65;
+  --color-red-500: #fe4d47;
+  --color-red-600: #ec1d16;
+  --color-red-700: #c7140e;
+  --color-red-800: #a41510;
+  --color-red-900: #881814;
+  --color-red-950: #4a0705;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  @apply min-h-dvh flex flex-col overflow-x-hidden text-gray-900;
+}
+
+#__nuxt {
+  @apply flex-1 flex flex-col;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  height: 0.6em;
+  width: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-700 rounded-md;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-600;
+}
+
+.font-mono {
+  font-family: "Fira Code", monospace;
+}
+
+.font-theme {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
