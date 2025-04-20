@@ -31,14 +31,14 @@ const onPaste = (event: ClipboardEvent) => {
 watch(text, async (value) => {
   await nextTick();
   if (!input.value) return;
-  if (value.trim() === input.value.innerText.trim()) return;
-  input.value.innerText = value;
+  if (String(value).trim() === input.value.innerText.trim()) return;
+  input.value.innerText = String(value);
 });
 
 onMounted(async () => {
   await nextTick();
   if (!input.value) return;
-  input.value.innerText = text.value || "‎"; // Invisible character to set the height
+  input.value.innerText = String(text.value) || "‎"; // Invisible character to set the height
 });
 </script>
 

@@ -42,9 +42,9 @@ const downloadImage = async (event: MouseEvent) => {
 
 <template>
   <div class="flex-1 text-center bg-stone-50 px-3 py-16 md:py-44">
-    <div class="flex justify-center">
+    <div class="flex justify-center mb-16">
       <h2
-        class="relative text-6xl font-inter font-black leading-tight tracking-tight mb-8"
+        class="relative text-6xl font-inter font-black leading-tight tracking-tight"
       >
         Give yourself a
         <span class="relative ml-1">
@@ -56,11 +56,7 @@ const downloadImage = async (event: MouseEvent) => {
       </h2>
     </div>
 
-    <p
-      class="font-theme font-semibold text-lg tracking-tight text-gray-500 mb-16"
-    >
-      Edit, Download, Done.
-    </p>
+    <p class="font-medium text-gray-500 mb-4">Just click and edit.</p>
 
     <div class="flex flex-col items-center justify-center">
       <div class="shadow-medium rounded-2xl">
