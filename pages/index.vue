@@ -49,13 +49,14 @@ const downloadImage = async (event: MouseEvent) => {
       <h2
         class="relative text-5xl md:text-6xl font-inter font-black leading-16 md:leading-tight tracking-tight"
       >
-        Give yourself a
-        <span class="relative inline-block ml-1">
+        You are the
+        <span class="relative inline-block ml-2 mr-1">
           <span
-            class="absolute -left-2 -bottom-1.5 md:bottom-0 h-[4.5rem] rounded-2xl -inset-x-2 -rotate-3 bg-green-200"
+            class="absolute -left-3.5 top-1 md:top-0.5 h-[4rem] md:h-[4.75rem] rounded-2xl -inset-x-2 -rotate-3 bg-green-200"
           />
-          <span class="relative">boost!</span>
+          <span class="relative">judge</span>
         </span>
+        now
       </h2>
     </div>
 
