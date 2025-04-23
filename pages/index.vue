@@ -3,6 +3,7 @@ import html2canvas from "html2canvas-pro";
 import confetti from "canvas-confetti";
 
 const metrics = useTemplateRef<HTMLDivElement>("metrics");
+const posthog = usePosthog();
 
 const isLoading = ref(false);
 const showWaterMark = ref(false);
@@ -16,6 +17,8 @@ const fireConfetti = (origin: { x: number; y: number }) => {
 };
 
 const downloadImage = async (event: MouseEvent) => {
+  posthog.capture("download_image");
+
   if (!metrics.value) return;
 
   showWaterMark.value = true;

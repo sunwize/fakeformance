@@ -4,4 +4,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/style/main.css"],
   modules: ["@nuxt/ui", "@nuxt/fonts", "@nuxt/eslint", "@nuxt/image"],
+
+  runtimeConfig: {
+    public: {
+      posthogPublicKey: "phc_pholfBHDGasMeJbDfrMuS0dLgduruDApKoOq8GbvM1P",
+      posthogHost: "https://us.i.posthog.com",
+    },
+  },
 });
